@@ -2,6 +2,13 @@ section {
     padding: 1rem;
 }
 
+h3 {
+    color: #fff;
+    font-size: 4rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Helvetica, sans-serif;
+    text-shadow: black;
+}
+
 p {
     margin-bottom: 1.5rem;
 }
@@ -11,7 +18,13 @@ p {
     overflow: scroll;
     height: 237px;
     align-items: center;
+    /* hides scrollbar in firefox */
     scrollbar-width: none;
+}
+
+/* hides scrollbar in chromium and safari */
+.horizontal-content::-webkit-scrollbar {
+    background: transparent;
 }
 
 .horizontal-content > div {
@@ -27,4 +40,16 @@ p {
 .horizontal-content > div:active {
     flex: 0 0 346.5px;
     height: 205.7px;
+}
+
+.parallax-image {
+    background-image: url(../img/movie.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    padding: 50px 20px;
+    
+    /* note:background-attachment gets disabled on mobile due to performance */
 }
